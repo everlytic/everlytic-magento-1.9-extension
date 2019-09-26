@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <api2>
+        <resource_groups>
+            <everlytic_productapi translate="title" module="everlytic_productapi">
+                <title>Everlytic</title>
+                <sort_order>10</sort_order>
+            </everlytic_productapi>
+        </resource_groups>
+        <resources>
+            <everlytic_productapi translate="title" module="everlytic_productapi">
+                <group>everlytic_productapi</group>
+                <model>everlytic_productapi/api2_product</model>
+                <working_model>catalog/product</working_model>
+                <title>Everlytic Products</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                    </guest>
+                    <admin>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes translate="" module="everlytic_productapi">
+                    <entity_id>Product ID</entity_id>
+                    <name>Product Name</name>
+                    <description>Product Description</description>
+                    <price>Price</price>
+                    <special_price>Special Price</special_price>
+                    <sku>SKU</sku>
+                    <product_url>URL</product_url>
+                    <add_to_cart_url>Add to Cart URL</add_to_cart_url>
+                    <gallery>Product Gallery</gallery>
+                    <image>Product Image</image>
+                </attributes>
+                <routes>
+                    <route_collection>
+                        <route>/everlytic/v1/products</route>
+                        <action_type>collection</action_type>
+                    </route_collection>
+                </routes>
+                <versions>1</versions>
+            </everlytic_productapi>
+        </resources>
+    </api2>
+</config>
