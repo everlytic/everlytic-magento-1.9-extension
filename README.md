@@ -18,7 +18,7 @@ This repo contains the Magento Extension that allows connection to the Everlytic
 - Visit, System > Web Services > Rest Attributes. Choose the User Type, advisably Admin and choose the attributes to give access to. 
 
 ##### Compatibility
- Compatibility: 1.9
+ Compatibility: 1.9 
 
 Support
 -------
