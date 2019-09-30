@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Everlytic_Productapi>
+            <version>0.1.0</version>
+        </Everlytic_Productapi>
+    </modules>
+    <global>
+        <helpers>
+            <everlytic_productapi>
+                <class>Everlytic_Productapi_Helper</class>
+            </everlytic_productapi>
+        </helpers>
+        <models>
+            <everlytic_productapi>
+                <class>Everlytic_Productapi_Model</class>
+            </everlytic_productapi>
+        </models>
+    </global>
+    <frontend>
+        <routers>
+            <everlytic_productapi>
+                <use>standard</use>
+                <args>
+                    <module>Everlytic_Productapi</module>
+                    <frontName>add-to-cart</frontName>
+                </args>
+            </everlytic_productapi>
+        </routers>
+    </frontend>
+</config> 
