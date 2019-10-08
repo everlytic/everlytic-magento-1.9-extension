@@ -46,7 +46,7 @@ class Everlytic_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog
     protected function _prepareProductForResponse(Mage_Catalog_Model_Product $product)
     {
         $productData = $product->getData();
-        $productData['price'] = Mage::helper('core')->currency($product->getPrice());
+        $productData['price'] = strip_tags(Mage::helper('core')->currency($product->getPrice()));
         $productData['gallery'] = $this->getGalleryFromProduct($product);
         $productData['product_url'] = $product->getProductUrl();
         $productData['add_to_cart_url'] = Mage::getBaseUrl() . "add-to-cart/index/index/product/" . $product->getId();
