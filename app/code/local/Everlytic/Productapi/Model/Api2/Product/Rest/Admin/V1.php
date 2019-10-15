@@ -61,18 +61,7 @@ class Everlytic_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog
      */
     protected function _retrieveCollection()
     {
-        /** @var $collection Mage_Catalog_Model_Resource_Product_Collection */
-        $collection = Mage::getResourceModel('catalog/product_collection');
-        $collection->addAttributeToSelect(array_keys(
-            $this->getAvailableAttributes($this->getUserType(), Mage_Api2_Model_Resource::OPERATION_ATTRIBUTE_READ)
-        ));
-        $products = $collection->load();
-
-        foreach ($products as $product) {
-            $this->_prepareProductForResponse($product);
-        }
-
-        return $products->toArray();
+        return (isset($_GET['search_query']) && ($_GET['search_query'] !== '')) ? $this->handleSearch($_GET['search_query']) : array();
     }
 
     /**
@@ -87,5 +76,30 @@ class Everlytic_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog
             $gallery[] = $_image->getUrl();
         }
         return $gallery;
+    }
+
+    /**
+     * @param $searchQuery
+     * @return mixed
+     */
+    private function handleSearch($searchQuery)
+    {
+        $collection = Mage::getResourceModel('catalog/product_collection');
+        $collection->addAttributeToSelect(array_keys(
+            $this->getAvailableAttributes($this->getUserType(), Mage_Api2_Model_Resource::OPERATION_ATTRIBUTE_READ)
+        ));
+        $collection->addFieldToFilter(array(
+                array('attribute' => 'name', array('like' => '%' . $searchQuery . '%')),
+                array('attribute' => 'sku', array('like' => '%' . $searchQuery . '%'))
+            )
+        );
+        $collection->setPageSize(10)->setCurPage(1);
+        $products = $collection->load();
+
+        foreach ($products as $product) {
+            $this->_prepareProductForResponse($product);
+        }
+
+        return $products->toArray();
     }
 }
