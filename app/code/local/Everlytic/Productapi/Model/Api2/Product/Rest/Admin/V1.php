@@ -61,7 +61,7 @@ class Everlytic_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog
      */
     protected function _retrieveCollection()
     {
-        return (isset($_GET['search_query']) && ($_GET['search_query'] !== '')) ? $this->handleSearch() : array();
+        return (isset($_GET['search_query']) && ($_GET['search_query'] !== '')) ? $this->handleSearch($_GET['search_query']) : array();
     }
 
     /**
@@ -79,15 +79,15 @@ class Everlytic_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog
     }
 
     /**
+     * @param $searchQuery
      * @return mixed
      */
-    private function handleSearch()
+    private function handleSearch($searchQuery)
     {
         $collection = Mage::getResourceModel('catalog/product_collection');
         $collection->addAttributeToSelect(array_keys(
             $this->getAvailableAttributes($this->getUserType(), Mage_Api2_Model_Resource::OPERATION_ATTRIBUTE_READ)
         ));
-        $searchQuery = $_GET['search_query'];
         $collection->addFieldToFilter(array(
                 array('attribute' => 'name', array('like' => '%' . $searchQuery . '%')),
                 array('attribute' => 'sku', array('like' => '%' . $searchQuery . '%'))
