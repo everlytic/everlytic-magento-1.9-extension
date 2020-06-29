@@ -19,19 +19,19 @@
  * needs please refer to http://www.magento.com for more information.
  *
  * @category    Mage
- * @package     Mage_Catalog
+ * @package     Mage_Customer
  * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
 /**
- * Abstract Api2 model for product instance
+ * API2 class for customer
  *
  * @category   Mage
- * @package    Mage_Catalog
+ * @package    Mage_Customer
  * @author     Magento Core Team <core@magentocommerce.com>
  */
-class Ev_Productapi_Model_Api2_Product extends Mage_Api2_Model_Resource
+class Everlytic_Customerapi_Model_Api2_Customer extends Mage_Api2_Model_Resource
 {
 
 }

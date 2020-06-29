@@ -1,11 +1,11 @@
-Everlytic Magento 1.9 Extension
+Ev Magento 1.9 Extension
 =====================
 ![Maintenance](https://img.shields.io/maintenance/yes/2019)
 ----------
-This repo contains the Magento Extension that allows connection to the Everlytic App .
+This repo contains the Magento Extension that allows connection to the Ev App .
 
 ###### Features:
-- Custom route to allow Everlytic to read product data from a Magento 1.9 installation.
+- Custom route to allow Ev to read product data from a Magento 1.9 installation.
 
 #### Installation
 
@@ -14,7 +14,7 @@ This repo contains the Magento Extension that allows connection to the Everlytic
 
 ###### Post Installation:
 - Clear your cache, see the menu System > Cache Management
-- Visit, System > Web Services > Rest Roles > Role API Resources to give access to the role to be used. Click on the Resource access drop-down and give access to Everlytic 
+- Visit, System > Web Services > Rest Roles > Role API Resources to give access to the role to be used. Click on the Resource access drop-down and give access to Ev 
 - Visit, System > Web Services > Rest Attributes. Choose the User Type, advisably Admin and choose the attributes to give access to. 
 
 ##### Compatibility
@@ -30,4 +30,4 @@ TBD
 
 Copyright
 ---------
-(c) 2019 Everlytic
+(c) 2019 Ev

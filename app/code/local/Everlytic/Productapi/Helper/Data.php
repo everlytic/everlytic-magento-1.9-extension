@@ -1,5 +1,5 @@
 <?php
-namespace Everlytic\Extension\Helper;
+namespace Ev\Extension\Helper;
 
 use Mage_Core_Helper_Abstract;
 

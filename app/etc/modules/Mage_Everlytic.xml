@@ -9,5 +9,13 @@
                 <Mage_Checkout />
             </depends>
         </Everlytic_Productapi>
+        <Everlytic_Customerapi>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>0.1.0</version>
+            <depends>
+                <Mage_Checkout />
+            </depends>
+        </Everlytic_Customerapi>
     </modules>
 </config>
