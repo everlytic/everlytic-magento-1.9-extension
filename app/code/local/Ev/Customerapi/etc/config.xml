@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ev_Customerapi>
+            <version>0.1.0</version>
+        </Ev_Customerapi>
+    </modules>
+    <global>
+        <models>
+            <ev_customerapi>
+                <class>Ev_Customerapi_Model</class>
+            </ev_customerapi>
+        </models>
+    </global>
+</config>

@@ -31,7 +31,7 @@
  * @package    Mage_Customer
  * @author     Magento Core Team <core@magentocommerce.com>
  */
-class Everlytic_Customerapi_Model_Api2_Customer extends Mage_Api2_Model_Resource
+class Ev_Customerapi_Model_Api2_Customer extends Mage_Api2_Model_Resource
 {
 
 }

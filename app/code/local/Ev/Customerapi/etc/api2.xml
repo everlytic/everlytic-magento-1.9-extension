@@ -2,17 +2,17 @@
 <config>
     <api2>
         <resource_groups>
-            <everlytic_customerapi translate="title" module="everlytic_customerapi">
-                <title>Everlytic</title>
+            <ev_customerapi translate="title" module="ev_customerapi">
+                <title>Ev</title>
                 <sort_order>10</sort_order>
-            </everlytic_customerapi>
+            </ev_customerapi>
         </resource_groups>
         <resources>
-            <everlytic_customerapi translate="title" module="everlytic_customerapi">
-                <group>everlytic_customerapi</group>
-                <model>everlytic_customerapi/api2_customer</model>
+            <ev_customerapi translate="title" module="ev_customerapi">
+                <group>ev_customerapi</group>
+                <model>ev_customerapi/api2_customer</model>
                 <working_model>customer/customer</working_model>
-                <title>Everlytic Customers</title>
+                <title>Ev Customers</title>
                 <sort_order>10</sort_order>
                 <privileges>
                     <guest>
@@ -22,7 +22,7 @@
                         <retrieve>1</retrieve>
                     </admin>
                 </privileges>
-                <attributes translate="" module="everlytic_customerapi">
+                <attributes translate="" module="ev_customerapi">
                     <entity_id>Customer ID</entity_id>
                     <firstname>First Name</firstname>
                     <lastname>Last Name</lastname>
@@ -37,12 +37,12 @@
                 </attributes>
                 <routes>
                     <route_collection>
-                        <route>/everlytic/v1/customers</route>
+                        <route>/ev/v1/customers</route>
                         <action_type>collection</action_type>
                     </route_collection>
                 </routes>
                 <versions>1</versions>
-            </everlytic_customerapi>
+            </ev_customerapi>
         </resources>
     </api2>
 </config>

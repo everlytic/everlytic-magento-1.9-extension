@@ -36,7 +36,7 @@
                 </attributes>
                 <routes>
                     <route_collection>
-                        <route>/everlytic/v1/products</route>
+                        <route>/ev/v1/products</route>
                         <action_type>collection</action_type>
                     </route_collection>
                 </routes>
