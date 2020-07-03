@@ -95,8 +95,11 @@ class Ev_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog_Model_
         );
         $collection->setPageSize(10)->setCurPage(1);
         $products = $collection->load();
+        $store = Mage::app()->getDefaultStoreView();
+        $storeId = $store->getStoreId();
 
         foreach ($products as $product) {
+            $product->setStoreId($storeId);
             $this->_prepareProductForResponse($product);
         }
 
