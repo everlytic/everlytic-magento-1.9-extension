@@ -2,17 +2,17 @@
 <config>
     <api2>
         <resource_groups>
-            <everlytic_productapi translate="title" module="everlytic_productapi">
-                <title>Everlytic</title>
+            <ev_productapi translate="title" module="ev_productapi">
+                <title>Ev</title>
                 <sort_order>10</sort_order>
-            </everlytic_productapi>
+            </ev_productapi>
         </resource_groups>
         <resources>
-            <everlytic_productapi translate="title" module="everlytic_productapi">
-                <group>everlytic_productapi</group>
-                <model>everlytic_productapi/api2_product</model>
+            <ev_productapi translate="title" module="ev_productapi">
+                <group>ev_productapi</group>
+                <model>ev_productapi/api2_product</model>
                 <working_model>catalog/product</working_model>
-                <title>Everlytic Products</title>
+                <title>Ev Products</title>
                 <sort_order>10</sort_order>
                 <privileges>
                     <guest>
@@ -22,7 +22,7 @@
                         <retrieve>1</retrieve>
                     </admin>
                 </privileges>
-                <attributes translate="" module="everlytic_productapi">
+                <attributes translate="" module="ev_productapi">
                     <entity_id>Product ID</entity_id>
                     <name>Product Name</name>
                     <description>Product Description</description>
@@ -36,12 +36,12 @@
                 </attributes>
                 <routes>
                     <route_collection>
-                        <route>/everlytic/v1/products</route>
+                        <route>/ev/v1/products</route>
                         <action_type>collection</action_type>
                     </route_collection>
                 </routes>
                 <versions>1</versions>
-            </everlytic_productapi>
+            </ev_productapi>
         </resources>
     </api2>
 </config>

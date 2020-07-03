@@ -31,7 +31,7 @@
  * @package    Mage_Catalog
  * @author     Magento Core Team <core@magentocommerce.com>
  */
-class Everlytic_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog_Model_Api2_Product_Rest
+class Ev_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog_Model_Api2_Product_Rest
 {
     /**
      * The greatest decimal value which could be stored. Corresponds to DECIMAL (12,4) SQL type
@@ -95,8 +95,11 @@ class Everlytic_Productapi_Model_Api2_Product_Rest_Admin_V1 extends Mage_Catalog
         );
         $collection->setPageSize(10)->setCurPage(1);
         $products = $collection->load();
+        $store = Mage::app()->getDefaultStoreView();
+        $storeId = $store->getStoreId();
 
         foreach ($products as $product) {
+            $product->setStoreId($storeId);
             $this->_prepareProductForResponse($product);
         }
 

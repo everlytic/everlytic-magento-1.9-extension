@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ev_Productapi>
+            <version>0.1.0</version>
+        </Ev_Productapi>
+    </modules>
+    <global>
+        <helpers>
+            <ev_productapi>
+                <class>Ev_Productapi_Helper</class>
+            </ev_productapi>
+        </helpers>
+        <models>
+            <ev_productapi>
+                <class>Ev_Productapi_Model</class>
+            </ev_productapi>
+        </models>
+    </global>
+    <frontend>
+        <routers>
+            <ev_productapi>
+                <use>standard</use>
+                <args>
+                    <module>Ev_Productapi</module>
+                    <frontName>add-to-cart</frontName>
+                </args>
+            </ev_productapi>
+        </routers>
+    </frontend>
+</config>

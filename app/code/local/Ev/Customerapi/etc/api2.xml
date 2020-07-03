@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+    <api2>
+        <resource_groups>
+            <ev_customerapi translate="title" module="ev_customerapi">
+                <title>Ev</title>
+                <sort_order>10</sort_order>
+            </ev_customerapi>
+        </resource_groups>
+        <resources>
+            <ev_customerapi translate="title" module="ev_customerapi">
+                <group>ev_customerapi</group>
+                <model>ev_customerapi/api2_customer</model>
+                <working_model>customer/customer</working_model>
+                <title>Ev Customers</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                    </guest>
+                    <admin>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes translate="" module="ev_customerapi">
+                    <entity_id>Customer ID</entity_id>
+                    <firstname>First Name</firstname>
+                    <lastname>Last Name</lastname>
+                    <email>Email</email>
+                    <gender>Gender</gender>
+                    <postcode>Post Code</postcode>
+                    <street>Street</street>
+                    <region>Region</region>
+                    <telephone>Telephone</telephone>
+                    <city>City</city>
+                    <country_id>Country</country_id>
+                </attributes>
+                <routes>
+                    <route_collection>
+                        <route>/ev/v1/customers</route>
+                        <action_type>collection</action_type>
+                    </route_collection>
+                </routes>
+                <versions>1</versions>
+            </ev_customerapi>
+        </resources>
+    </api2>
+</config>
